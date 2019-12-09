@@ -7,7 +7,7 @@ $data = array();
 foreach($resultQuery as $row){
   $data[] = $row;
 }
-localStorage.setItem('session', JSON.stringify(session));
+
 mysqli_close($conn);
 echo json_encode($data);
 ?>
