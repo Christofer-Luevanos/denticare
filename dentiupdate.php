@@ -1,11 +1,11 @@
 <?php
   include 'denticonfig.php';
-  $name = filter_input(INPUT_POST, "nombre");
-  $lastname = filter_input(INPUT_POST, "apellido");
-  $birthday = filter_input(INPUT_POST, "nacimiento");
-  $gender = filter_input(INPUT_POST, "sexo");
-  $phone = filter_input(INPUT_POST, "telefono");
-  $address = filter_input(INPUT_POST, "direccion");
+  $name = filter_input(INPUT_POST, "nombre1");
+  $lastname = filter_input(INPUT_POST, "apellido1");
+  $birthday = filter_input(INPUT_POST, "nacimiento1");
+  $gender = filter_input(INPUT_POST, "sexo1");
+  $phone = filter_input(INPUT_POST, "telefono1");
+  $address = filter_input(INPUT_POST, "direccion1");
   $query = "UPDATE PACIENTE SET NOMBRE_P='".$name."',APELLIDO_P='".$lastname."',SEXO='".$gender."',TELEFONO='".$phone."',DOMICILIO='".$address."',FECHA_NAC='".$birthday."'WHERE NOMBRE_P='".$name."'";
   $result = mysqli_query($conn, $query);
   $lastId = mysqli_insert_id($conn);
