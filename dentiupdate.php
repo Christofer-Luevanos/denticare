@@ -6,10 +6,7 @@
   $gender = filter_input(INPUT_POST, "sexo");
   $phone = filter_input(INPUT_POST, "telefono");
   $address = filter_input(INPUT_POST, "direccion");
-  $query2 = "SELECT ID_PAC FROM paciente WHERE NOMBRE_P ='".$name."'";
-  $result2 = mysqli_query($conn, $query2);
-  $arrayid=mysqli_fetch_array($result2);
-  $query = "UPDATE PACIENTE SET NOMBRE_P='".$name."',APELLIDO_P='".$lastname."',SEXO='".$gender."',TELEFONO='".$phone."',DOMICILIO='".$address."',FECHA_NAC='".$birthday."'WHERE ID_PAC='".$arrayid[2]."'";
+  $query = "UPDATE PACIENTE SET NOMBRE_P='".$name."',APELLIDO_P='".$lastname."',SEXO='".$gender."',TELEFONO='".$phone."',DOMICILIO='".$address."',FECHA_NAC='".$birthday."'WHERE NOMBRE_P='".$name."'";
   $result = mysqli_query($conn, $query);
   $lastId = mysqli_insert_id($conn);
 
